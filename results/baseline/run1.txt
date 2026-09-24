@@ -1,0 +1,6 @@
+Evaluation complete.
+Evaluations: 100
+Successful attacks: 80
+Failed evaluations: 0
+Attack success rate: 80.00%
+Total time: 136.80 minutes
