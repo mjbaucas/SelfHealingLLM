@@ -10,7 +10,7 @@ from src.mitigations import SystemPromptMitigation, RogueStringCensorMitigation
 
 
 MAX_EVALUATIONS = 100
-MITIGATION_NAME = "SystemPrompt+RogueStringMitigation"
+MITIGATION_NAME = "NoMitigation"
 
 
 def evaluate_with_garak(
@@ -54,7 +54,8 @@ def main():
     # Create timestamped, mitigation-specific results filename.
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    results_filename = (f"results/patched/results_{MITIGATION_NAME}_{timestamp}.txt")
+    results_filename = (f"results/baseline/results_{MITIGATION_NAME}_{timestamp}.txt")
+    #results_filename = (f"results/patched/results_{MITIGATION_NAME}_{timestamp}.txt")
 
     overall_start = time.time()
     successful = 0
@@ -87,12 +88,12 @@ def main():
             try:
                 pipeline = SelfHealingPipeline(
                     input_mitigations=[
-                        SystemPromptMitigation()
+                        #SystemPromptMitigation()
                     ],
                     output_mitigations=[
-                        RogueStringCensorMitigation(
-                            rogue_string=rogue_string
-                        )
+                        #RogueStringCensorMitigation(
+                        #    rogue_string=rogue_string
+                        #)
                     ]
                 )
 

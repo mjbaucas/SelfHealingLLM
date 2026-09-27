@@ -8,13 +8,13 @@ The pipeline is designed with separate input and output mitigation stages:
 
 ```text
 User Input
-    ↓
+    |
 Input Mitigations
-    ↓
+    |
 LLM
-    ↓
+    |
 Output Mitigations
-    ↓
+    |
 Final Response
 ```
 
@@ -29,18 +29,18 @@ The modular design allows different mitigation mechanisms to be enabled and comb
 
 ```text
 SelfHealingLLM/
-├── src/
-│   ├── evaluate.py
-│   ├── mitigations.py
-│   ├── ollama_client.py
-│   └── pipeline.py
+|── src/
+│   |── evaluate.py
+│   |── mitigations.py
+│   |── ollama_client.py
+│   |── pipeline.py
 │
-├── results/
-│   ├── baseline/
-│   └── patched/
+|── results/
+│   |── baseline/
+│   |── patched/
 │
-├── README.md
-└── requirements.txt
+|── README.md
+|── requirements.txt
 ```
 
 ## Requirements
